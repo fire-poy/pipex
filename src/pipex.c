@@ -6,7 +6,7 @@
 /*   By: mpons <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:03:39 by mpons             #+#    #+#             */
-/*   Updated: 2022/01/11 23:13:30 by mpons            ###   ########.fr       */
+/*   Updated: 2022/01/13 15:35:15 by mpons            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../inc/pipex.h"
@@ -55,9 +55,9 @@ int	main(int ac, char **av, char **envp)
 	fd[0][0] = open(av[1], O_RDONLY);
 	fd[0][1] = open(av[4], O_CREAT | O_RDWR | O_TRUNC, 0644);
 	if (fd[0][0] < 0)
-		return (err_msg("infile"));
+		return (err_msg(av[1]));
 	if (fd[0][1] < 0)
-		return (err_msg("outfile"));
+		return (err_msg(av[4]));
 	if (pipe(fd[1]) == -1)
 		err_msg("pipe error");
 	forking(id);

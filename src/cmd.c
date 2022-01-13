@@ -6,7 +6,7 @@
 /*   By: mpons <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 23:50:30 by mpons             #+#    #+#             */
-/*   Updated: 2022/01/11 22:50:43 by mpons            ###   ########.fr       */
+/*   Updated: 2022/01/13 15:59:09 by mpons            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../inc/pipex.h"
@@ -47,7 +47,9 @@ void	find_path(char *av, char **envp)
 		free (paths[i]);
 		i++;
 	}	
+	ft_putstr_fd("command not found: ", 2);
+	ft_putendl_fd(cmd_tab[0], 2);
 	free_tab (cmd_tab);
-	err_msg("command not found");
+	exit (1);
 }
 //	execve("usr/bin/" , cmd_tab, envp);
