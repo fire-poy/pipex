@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mpons <marvin@42lausanne.ch>               +#+  +:+       +#+         #
+#    By: mpons <mpons@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 22:10:59 by mpons             #+#    #+#              #
-#    Updated: 2022/01/09 14:34:27 by mpons            ###   ########.fr        #
+#    Updated: 2022/05/23 12:17:19 by mpons            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,9 +34,6 @@ all: $(NAME)
 $(NAME):	$(OBJS)
 			$(MAKE) -C $(LIBFT_DIR)
 			$(CC) $(CFLAGS) -o $(NAME) $(INC) $(SRC) $(LIB)
-
-norm:
-			norminette -d ./inc ./libft ./src
 
 clean:
 			$(MAKE) -C $(LIBFT_DIR) clean

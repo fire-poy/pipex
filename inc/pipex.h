@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpons <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: mpons <mpons@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 22:16:51 by mpons             #+#    #+#             */
-/*   Updated: 2022/01/13 16:06:37 by mpons            ###   ########.fr       */
+/*   Updated: 2022/05/23 12:14:35 by mpons            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <sys/types.h>
 # include <sys/wait.h>
 # include "../libft/libft.h"
+// # include <semaphore.h>
 
 int		err_msg(char *err);
 int		proc_1(int fd[2][2], char **av, char **envp);
